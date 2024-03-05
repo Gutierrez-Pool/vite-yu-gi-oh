@@ -38,5 +38,9 @@ ul {
     display: flex;
     flex-flow: wrap;
     gap: $cardListGap;
+
+    padding: 40px;
+
+    background-color: white;
 }
 </style>

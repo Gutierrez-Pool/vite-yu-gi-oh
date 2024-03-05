@@ -14,7 +14,9 @@ export default {
         <strong>
             {{ card.name }}
         </strong>
-        {{ card.type }}
+        <small>
+            {{ card.type }}
+        </small>
     </li>
 </template>
 

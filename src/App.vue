@@ -4,6 +4,7 @@ import {store} from './store.js';
 
 import AppNav from './components/AppNav.vue';
 import AppCards from './components/AppCards.vue';
+import CardSearch from './components/CardSearch.vue';
 
 export default {
 
@@ -24,6 +25,18 @@ export default {
   components: {
     AppNav,
     AppCards,
+    CardSearch,
+  },
+
+  methods: {
+
+    filterCards() {
+      axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php').then(res => {
+
+        this.store.filters = res.archetype
+
+      });
+    }
   },
 }
 </script>
@@ -32,6 +45,7 @@ export default {
 
   <AppNav></AppNav>
   <div class="container">
+    <CardSearch @filter="filterCards()"></CardSearch>
     <AppCards></AppCards>
   </div>
 
