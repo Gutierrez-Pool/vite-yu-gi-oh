@@ -1,9 +1,9 @@
 <script>
 import axios from 'axios';
 import {store} from './store.js';
+
 import AppNav from './components/AppNav.vue';
 import AppCards from './components/AppCards.vue';
-import AppCardItem from './components/AppCardItem.vue';
 
 export default {
 
@@ -30,8 +30,11 @@ export default {
 
 <template>
 
-<AppNav></AppNav>
-<AppCards></AppCards>
+  <AppNav></AppNav>
+  <div class="container">
+    <AppCards></AppCards>
+  </div>
+
 
 </template>
 

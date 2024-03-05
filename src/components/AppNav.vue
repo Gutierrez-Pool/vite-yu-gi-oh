@@ -12,6 +12,7 @@ export default {
 
 <style lang="scss">
 nav {
+    background-color: white;
     padding: 15px 50px;
 }
 </style>

@@ -32,8 +32,11 @@ export default {
 </template>
 
 <style lang="scss">
-main {
-    background-color: #d48f38;
-    height: 100vh;
+@use '../styles/variables' as *;
+
+ul {
+    display: flex;
+    flex-flow: wrap;
+    gap: $cardListGap;
 }
 </style>
