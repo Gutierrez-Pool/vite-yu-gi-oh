@@ -2,6 +2,9 @@
 import { store } from '../store.js';
 
 export default {
+
+    name:'CardSearch',
+
     data() {
         return {
             store,
@@ -14,13 +17,12 @@ export default {
     <div class="container">
 
         <div id="dropdown">
-            <select name="cards" id="cards">
+            <select name="archetype-filter" id="archetype-filter" @change="$emit('filter')" v-model="store.filtervalue">
                 <option 
-                    v-for="currentFilter in store.cards"
-                    @click="$emit('filter')"
-                    value="archetype"
+                    v-for="currentArchetype in store.archetypes"
+                    :value="currentArchetype.archetype_name"
                 >
-                    {{ currentFilter.archetype }}
+                    {{ currentArchetype.archetype_name }}
                 </option>
                 
             </select>
